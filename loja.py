@@ -13,6 +13,8 @@ def carregar_loja():
     # Recorta cada personagem em colunas
     for coluna in range(num_personagens):
         frame = sprite_sheet.subsurface((coluna * frame_w, 0, frame_w, frame_h))
+        # Redimensiona para 64x64
+        frame = pygame.transform.scale(frame, (64, 64))
         loja.append(frame)
 
     return loja

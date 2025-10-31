@@ -11,7 +11,7 @@ class Projetil:
         self.alvo_y = alvo_y
         self.dano = dano
         self.imagem = imagem 
-        self.velocidade = 15 
+        self.velocidade = 25 
         self.atingiu = False 
 
         dx = alvo_x - x

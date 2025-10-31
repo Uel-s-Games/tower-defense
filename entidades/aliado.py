@@ -5,14 +5,15 @@ from entidades.projetil import Projetil
 from config import * 
 
 class Aliado:
-    def __init__(self, x, y, imagem):
+    def __init__(self, x, y, imagem, dano=20, index_loja=0):
         self.x = x
         self.y = y
         self.imagem = imagem
         self.alcance = 200
-        self.dano = 20
-        self.cooldown = 500
+        self.dano = dano
+        self.cooldown = 400
         self.ultimo_tiro = 0
+        self.index_loja = index_loja  # Índice na loja para devolver dinheiro
         
         # Cria a Surface do projétil
         self.projetil_tamanho = 10

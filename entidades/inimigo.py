@@ -3,24 +3,27 @@ import pygame
 from config import *
 
 class Inimigo:
-    def __init__(self, caminho):
+    def __init__(self, caminho, vida=100, velocidade=2, tamanho=32, cor=None):
         self.caminho = caminho
         self.x, self.y = self.caminho[0]
         self.indice = 0
-        self.vel = 2
+        self.vel = velocidade
         
-        self.largura = 32
-        self.altura = 32
+        self.largura = tamanho
+        self.altura = tamanho
         
         self.imagem_original = pygame.Surface((self.largura, self.altura), pygame.SRCALPHA)
-        VERDE_INIMIGO = (0, 100, 0)
-        self.imagem_original.fill(VERDE_INIMIGO)
+        if cor is None:
+            COR_INIMIGO = (0, 100, 0)
+        else:
+            COR_INIMIGO = cor
+        self.imagem_original.fill(COR_INIMIGO)
         pygame.draw.rect(self.imagem_original, PRETO, (0, 0, self.largura, self.altura), 1)
 
         self.imagem = pygame.transform.scale(self.imagem_original, (self.largura, self.altura))
         self.rect = self.imagem.get_rect(topleft=(self.x, self.y))
         
-        self.vida_max = 100
+        self.vida_max = vida
         self.vida = self.vida_max
 
     def mover(self):
