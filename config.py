@@ -21,7 +21,7 @@ DINHEIRO_INICIAL = 200  # Apenas para comprar 2 Steves no início
 CUSTOS_ALIADOS = [100, 500, 800]  # Custos para cada tipo de aliado
 DANOS_ALIADOS = [12, 20, 30]  # Danos para cada tipo de aliado (Steve, Alex, Esqueleto) - reduzido
 RECOMPENSA_INIMIGO = 9  # Dinheiro ganho ao matar inimigo (reduzido ainda mais para dificultar)
-MAX_ALIADOS = 12  # Limite máximo de aliados no mapa
+MAX_ALIADOS = 14  # Limite máximo de aliados no mapa
 
 CAMINHO_INIMIGOS = [
     (18, 607),
